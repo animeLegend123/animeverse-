@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>AnimeVerse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e2f;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #292944;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    section {
+      padding: 20px;
+    }
+    .anime-list li {
+      margin: 5px 0;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AnimeVerse</h1>
+  <p>Découvre le monde des animés et mangas</p>
+</header>
+
+<nav>
+  <a href="#top">Top Animes</a>
+  <a href="#recos">Recommandés</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="top">
+  <h2>Top 3 Animes</h2>
+  <ul class="anime-list">
+    <li>1. Attack on Titan</li>
+    <li>2. Demon Slayer</li>
+    <li>3. Jujutsu Kaisen</li>
+  </ul>
+</section>
+
+<section id="recos">
+  <h2>Recommandations</h2>
+  <button onclick="showReco()">Clique pour une reco aléatoire</button>
+  <p id="recoText" style="margin-top:10px;"></p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>samuelnehemiekouassi8@gmail.com</p>
+</section>
+
+<footer>
+  &copy; 2025 AnimeVerse
+</footer>
+
+<script>
+  const recos = [
+    "Chainsaw Man – pour les amateurs d'action brute",
+    "One Piece – un classique à ne pas manquer",
+    "Erased – pour les fans de suspense",
+    "Mob Psycho 100 – fun et profond à la fois"
+  ];
+  function showReco() {
+    const random = recos[Math.floor(Math.random() * recos.length)];
+    document.getElementById("recoText").innerText = random;
+  }
+</script>
+
+</body>
+</html>
